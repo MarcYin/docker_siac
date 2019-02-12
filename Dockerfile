@@ -7,5 +7,5 @@ ENV PATH /opt/conda/envs/env/bin:$PATH
 # This will install latest version of GDAL
 RUN source activate env
 RUN conda install -c conda-forge gdal==2.3.3 pip scipy numpy requests
-RUN pip install S2-TOA-TO-LAI
+RUN conda install -c f0xy S2-TOA-TO-LAI
 
