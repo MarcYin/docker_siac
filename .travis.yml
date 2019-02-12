@@ -10,6 +10,7 @@ before_script:
   - version="v2.1.1"
   - docker pull "$IMAGE_NAME" || true
 script:
+  - sudo apt-get install gcc
   - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
   - docker run "$IMAGE_NAME"
 
